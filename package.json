@@ -1,7 +1,8 @@
 {
   "name": "yds-snippets",
   "displayName": "YDS Snippets",
-  "description": "snippet library for yds common components and useful code ",
+  "publisher": "YAMAHA",
+  "description": "Yamaha - YDS snippet library for yds common components and useful code. UNDER CONSTRUCTION, RELEASE PLANNED 1/1/24",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -13,8 +14,12 @@
     "snippets": [
       {
         "language": "typescriptreact",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/yds-core.code-snippets"
       }
     ]
-  }
+  },
+  "galleryBanner": {
+    "color": "#4842ff"
+  },
+  "icon": "favicon.ico"
 }
