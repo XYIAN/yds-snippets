@@ -6,5 +6,7 @@ All notable changes to the "yds-snippets" extension
 
 ## [0.1.0] - 2024-01-01
 
+## [UPDATE]
+
 - Library witheld for testing
 - Initial release
