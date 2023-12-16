@@ -5,7 +5,7 @@
   "description": "Yamaha - YDS snippet library for yds common components and useful code. UNDER CONSTRUCTION, RELEASE PLANNED 1/1/24",
   "version": "0.0.15",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.84.0"
   },
   "categories": [
     "Snippets"
@@ -24,5 +24,6 @@
   "galleryBanner": {
     "color": "#8f8ce6"
   },
+  "badges": [],
   "icon": "favicon.ico"
 }
