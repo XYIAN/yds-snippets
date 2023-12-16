@@ -1,3 +1,316 @@
 {
-  //Snippet library is currently being tested, please wait and this library will begin to fill up over time
+  "YAMAHA use state snippet": {
+    "scope": "typescriptreact",
+    "prefix": "y_state",
+    "body": [
+      "\tconst [${1:variableName}, set${1:variableName}] = useState<${2:type}>(${3:InitialStateValue})$0"
+    ],
+    "description": "quick use state snippet that is slightly more useful than predefined useState snippet. "
+  },
+  "YAMAHA use effect snippet": {
+    "scope": "typescriptreact",
+    "prefix": ["y_effect", "useEffect", "effect", "y_useEffect"],
+    "body": [
+      "\tuseEffect(() =>",
+      "\t{",
+      "\t\t${1:UseEffectLogicGoesHere}",
+      "\t},[$0])//only leave empty to run once on mount/render"
+    ],
+    "description": "quick use effect snippet that is slightly more useful than predefined useEffect snippet"
+  },
+  "object destructure ": {
+    "scope": "typescriptreact",
+    "prefix": "y_DestructureObject",
+    "body": [
+      "const { $3 } = ${1:ObjectOrFunction}${2|(Function_Params);, ;//object, no params ( delete this comment ) |}$0"
+    ],
+    "description": "quick object destrucutre snippet that can be used for objects for functions such as props or APIs"
+  },
+  "YAMAHA functional component general snippet": {
+    "scope": "typescriptreact",
+    "prefix": ["yxx_functionalComponent", "tsrafce"],
+    "body": [
+      "import { useEffect, useState, ReactNode } from 'react';",
+      "",
+      "interface  ${TM_FILENAME_BASE}Props {",
+      "\t${1:ExamplePropName}: ${2| string, number, Date, number[], string[]|};",
+      "}",
+      "",
+      "export const  ${TM_FILENAME_BASE} = ({ ${1:ExamplePropName}}:  ${TM_FILENAME_BASE}Props) => {",
+      "\tconst [exampleState, setExampleState] = useState< ${2|  string, number, Date, number[], string[]|}>( ${1:ExamplePropName});",
+      "\tuseEffect(() => {",
+      "\t\tconsole.warn('Example State Changed to:', exampleState);",
+      "\t}, [exampleState]); //leave dep array empty if it should only run once on mount ",
+      "\t\t$0",
+      "\treturn <div> Starter code for ${TM_FILENAME_BASE}</div>;",
+      "};",
+      ""
+    ],
+    "description": "minor tweak to tsrafce to be geared toward our use case"
+  },
+  "Button General - for all non-toolbar buttons ": {
+    "scope": "typescriptreact",
+    "prefix": ["yx_Button"],
+    "body": [
+      "// * All button props are optional (ex if you dont want an icon, dont include the prop)",
+      " <$0YDSButton onClick={${1:function}} icon={${2|'NONE','ADD', 'BOOK', 'PLUS', 'MINUS', 'EDIT', 'LIST', 'SEARCH', 'PDF', 'EXCEL', 'LINK', 'ADDRESS_BOOK', 'NOTIFICATION_BELL', 'DELETE_USER', 'ADD_USER', 'SIGN_OUT', 'USER_CIRCLE', 'HAMBURGER_MENU', 'EXTERNAL_LINK', 'CARET_DOWN', 'ERASER', 'PRINT', 'QUESTION', 'FACEBOOK_SQUARE', 'TWITTER_SQUARE', 'YOUTUBE_SQUARE', 'INSTAGRAM_SQUARE', 'CHECK', 'CLEAR_FIELDS', 'CLEAR', 'INFO', 'PEN', 'DELETE_ACTION', 'REFRESH', 'COPY', 'DOWNLOAD', 'VIEW_ACTION', 'ARROW_RIGHT', 'ARROW_LEFT', 'SAVE', 'CALENDAR', 'FLAG', 'VIDEO_FILE', 'THUMBS_UP', 'UPLOAD', 'WARNING', 'CARET_UP', 'MINUS_SQUARE', 'PLUS_SQUARE', 'ANGLE_RIGHT', 'ANGLE_LEFT', 'INFO_CIRCLE', 'ARROW_RIGHT_CIRCLE', 'ARROW_LEFT_CIRCLE', 'TRUCK', 'FOLDER_SOLID', 'FILE', 'FILE_ALT', 'FOLDER'|}}/>"
+    ],
+    "description": "need a basic button, icon only button or any button that is not in a toolbar? use this!!! for toolbar buttons use YDSToolbarbutton yx_bt"
+  },
+  "YDS Screen basic ": {
+    "scope": "typescriptreact",
+    "prefix": "yxx_ScreenBasic",
+    "body": [
+      "import { useEffect, useState, useContext } from 'react';",
+      "import { YDSPanel, YDSScreenContext } from '@businessconnect/common-ui';",
+      "// import {  ${TM_FILENAME_BASE}Api} from '../api/ ${TM_FILENAME_BASE}Api'",
+      "",
+      "export const MyInventoryScreen = () => {",
+      "\tconst { module } = useContext(YDSScreenContext);",
+      "\tconst [isLoading, setIsLoading] = useState(false);",
+      "\t//const { exampleGetRequest } =  ${TM_FILENAME_BASE}Api(module);",
+      "",
+      "\tuseEffect(() => {",
+      "\t\tconsole.log('This is a starter template');",
+      "\t}, []);",
+      "\treturn (",
+      "\t\t<YDSPanel header='${TM_FILENAME_BASE}' toggleable={${1| false, true|}}>",
+      "\t\t\tStarter for any Screen - YDS Screen Template",
+      "\t\t</YDSPanel>",
+      "\t);",
+      "};",
+      ""
+    ],
+    "description": "need a basic screen starter thats better than tsrafce? use this! This snippet contains all the basic items needed for any yamaha screen"
+  },
+  "YXApi handleRequest resource call": {
+    "scope": "typescriptreact",
+    "key": "ctrl+/+a",
+    "prefix": "yxa_requestFunction",
+    "body": [
+      "\tconst ${1:apiCall}Handler = () => {",
+      "\t\t${3| if (!isLoading) setIsLoading(true);, //isLoading useState should probably go here but im choosing not to.|}",
+      "\t\t${1:apiCall}()",
+      "\t\t\t.then((response) => {",
+      "\t\t\t\t//might need response.data etc if not using axiosHelpers in your apiCall",
+      "\t\t\t\t${2:setState}(response);",
+      "\t\t\t})",
+      "\t\t\t.finally(() => {",
+      "\t\t\t\t${4| setIsLoading(false);, //setIsLoading(false)|}",
+      "\t\t\t});$0",
+      "\t};"
+    ],
+    "description": "Need to to make an apiCall that you defined in your apiFile and imported? Use this!"
+  },
+  "YXApi Component snippet - basic starter template ": {
+    "scope": "typescriptreact",
+    "prefix": "yxa_apiComponentStarter",
+    "body": [
+      "import { Module } from '@businessconnect/common-model';",
+      "import { getRequest } from '@businessconnect/common-utils';",
+      "",
+      "export const  ${TM_FILENAME_BASE} = (module: Module) => {",
+      "\t// !! apiCallsAre camelCaseOnly !!  ",
+      "\tconst ${1:exampleGetRequest} = ($0) => {",
+      "\t//press ctrl + space when highlighting a function to show its definition and needed props",
+      "\t\treturn ${2| getRequest, postRequestFormData, getFileDownload, postRequestJSON, postRequestQueryString, postRequestURLEncodedData|}(module, '${3:requestName(if any)}', '${4:methodName}', {${5:params(if any)}});",
+      "\t};",
+      "\tconst exampleGetRequest2 = () => {",
+      "\t\treturn getRequest(module, 'requestNameexample', 'methodNameExample', {paramName:'example', id:1});",
+      "\t};",
+      "\treturn {  ${1:exampleGetRequest}, exampleGetRequest2 };",
+      "};",
+      ""
+    ],
+    "description": "creating an api file? use this as starter code! This uses correct YDSReact Standards "
+  },
+  "api call snippet - use this to start any api const inside of your api file+function": {
+    "scope": "typescriptreact",
+    "prefix": "yxa_axiosHelpers",
+    "body": [
+      "const ${1:requestFunctionName} = (${2:params(if any)}) => {",
+      "\treturn ${3| getRequest, postRequestFormData, postRequestJSON, postRequestQueryString, postRequestURLEncodedData, |}(module, '${4:requestName}', '${5:methodName(if any)}', { ${6:params(if any)} });",
+      "};",
+      "$0"
+    ],
+    "description": "Need to make a request/api function call inside of an api file? use this!"
+  },
+  "Dropdown input( hook form )": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_DropDownController",
+    "body": [
+      "\t<DropDownController",
+      "\t\tcontrol={${1:control}}",
+      "\t\tname='${2:FormElementID}'",
+      "\t\toptions={${3:options}}",
+      "\t\toptionLabel='${4:labelParamFrom_options[]}'",
+      "\t\toptionValue='${5:valueParamFrom_options[]}'",
+      "\t/>$0"
+    ],
+    "description": "need a dropdown element within a <form> ? use this! (only for hook forms )"
+  },
+  "Calendar/date input( hook form )": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_CalendarController",
+    "body": [
+      " <CalenderController",
+      "\tcontrol={${1:control}}",
+      "\t\tname='${2:FormElementID}'",
+      "\t\tlabel='${3:labelText}'",
+      "\t\tinline={${4| true, false|}}",
+      "\t\trequired={${5| true, false|}}",
+      "\t/>$0"
+    ],
+    "description": "need a calendar/date form field? use this! (only for hook forms )"
+  },
+  "Checkbox input( hook form )": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_CheckboxController",
+    "body": [
+      " <CheckBoxController",
+      "\t\tcontrol={${1:control}}",
+      "\t\tname='${2:FormElementID}'",
+      "\t\tlabel='${3:labelText}'",
+      "\t\tinline={${4| true, false|}}",
+      "\t\trequired={${5| true, false|}}",
+      "/>$0"
+    ],
+    "description": "need a checkbox input element for a form? use this! (only for hook forms )"
+  },
+  "Email input ( hook form ) ": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_EmailController",
+    "body": [
+      "<EmailController",
+      "\t\tcontrol={${1:control}}",
+      "\t\tname='${2:FormElementID}'",
+      "\t\tlabel='${3:labelText}'",
+      "\t\tinline={${4| true, false|}}",
+      "\t\trequired={${5| true, false|}}",
+      "/>$0"
+    ],
+    "description": "need an email form input? use this! ( hook form only )"
+  },
+  "Input text form input element ( hook form )": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_InputTextController",
+    "body": [
+      "  <InputTextController",
+      "\t\tcontrol={${1:control}}",
+      "\t\tname='${2:FormElementID}'",
+      "\t\tlabel='${3:labelText}'",
+      "\t\tinline={${4| true, false|}}",
+      "\t\trequired={${5| true, false|}}",
+      "/>$0"
+    ],
+    "description": "need a text input element for a form? use this! ( hook form only ) "
+  },
+  "Radio input ( hook form )": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_RadioButtonController",
+    "body": [
+      "<RadioButtonController",
+      "\t\tcontrol={${1:control}}",
+      "\t\tname='${2:FormElementID}'",
+      "\t\tlabel='${3:labelText}'",
+      "\t\tinline={${4| true, false|}}",
+      "\t\trequired={${5| true, false|}}",
+      "\t\tvalue={${3:radioValue}} />$0"
+    ],
+    "description": "need a radio input for a form? use this! ( hook form only )"
+  },
+  "Phone number input ( hook form ) ": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_PhoneNumberInputController",
+    "body": [
+      "<InputPhoneNumberController",
+      "\t\tcontrol={${1:control}}",
+      "\t\tname='${2:FormElementID}'",
+      "\t\tlabel='${3:labelText}'",
+      "\t\tinline={${4| true, false|}}",
+      "\t\trequired={${5| true, false|}}",
+      "/>$0"
+    ],
+    "description": "need a phone number form imput? use this! ( hook form only )"
+  },
+  "useForm init": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_useForm",
+    "body": [
+      "\tconst { control, handleSubmit, ${1| , setValue, getValues, watch, reset, formState, setError, setFocus, trigger |},${2| , setValue, getValues, watch, reset, formState, setError, setFocus, trigger |} } = $0useForm<${3:FormFieldInterfaceOrType}>({ defaultValues: {} });",
+      ""
+    ],
+    "description": "quick set up to add a use form and be guided through its props"
+  },
+  "ListBox Controller ( hook form only )": {
+    "scope": "typescriptreact",
+    "prefix": "yxf_ListBox",
+    "body": [
+      " <YDSListBoxController",
+      "\t\tcontrol={${1:control}}",
+      "\t\tname=${2:FormElementID}",
+      "\t\tlabel='${3:labelText}'",
+      "\t\tinline={${4| true, false|}}",
+      "\t\trequired={${5| true, false|}}",
+      "\t\toptions={${6:JSON_Array or Array[]}}",
+      "\t\toptionLabel='${7:JsonArrayParamName(display value)}'",
+      "\t\toptionValue='${7:JsonArrayParamName(value given when selected)}'",
+      "/>"
+    ],
+    "description": "need a list box within a form? Use this! "
+  },
+  "YDS basic grid COMPONENT not to be confused with basic grid only or grid screen": {
+    "scope": "typescriptreact",
+    "prefix": "yxg_GridComponent",
+    "body": [
+      "import { YDSGridBasic } from '@businessconnect/common-ui-components';",
+      "import { GridColDef,GridRenderCellParams } from '@mui/x-data-grid-premium';",
+      "interface ${TM_FILENAME_BASE}Props = {",
+      "\trowData: ${1:any}[];//*only use 'any' type for testing - all production code should NOT USE 'ANY' OR 'OBJECT' types ",
+      "};",
+      "export const ${TM_FILENAME_BASE} = ({ rowData }:   ${TM_FILENAME_BASE}Props) => {",
+      "\t const RenderCellExample = (params:GridRenderCellParams) => {<div>can put something like params.row.id here (make sure to wrap in object{})</div>}",
+      "\tconst columns: GridColDef[] = [{ field: 'id', headerName: 'OID Example', flex: 1, renderCell:RenderCellExample }];",
+      "\t$0",
+      "\treturn <YDSGridBasic rows={rowData} columns={columns}/>;",
+      "};"
+    ],
+    "description": "Need a quick grid component? Use this! YDS basic grid set up for any FileNameGrid.tsx (grid component) !not to be confused with basic grid only or grid screen!"
+  },
+  "YDS Grid Read Only ": {
+    "scope": "typescriptreact",
+    "prefix": "yxg_GridReadOnly",
+    "body": [
+      "<YDSReadOnlyGrid$0",
+      "\t\t\tcolumns={${1:GridColDef[]}}",
+      "\t\t\tresourceCall={{ requestName: '${2:requestName}', methodName: '${3:methodName(if any)}', {${3:params(if any)}} }}",
+      "\t\t\tnoRowsMessage='${5:EmptyGridMessageToDisplay(remove for default)}'",
+      "\t\t/>"
+    ],
+    "description": "need a simple read only grid that only loads data on mount? use this! Just pass a resource call and columns!"
+  },
+  "YDS Grid Basic ": {
+    "scope": "typescriptreact",
+    "prefix": "yxg_GridBasic",
+    "body": ["<YDSGridBasic rows={${1:rows}} columns={${2:columns}} />"],
+    "description": "need a quick yds grid? use this! This component has large capability but the only required props are columns and rows! (getRow id is auto generated if not provided)"
+  },
+  "Grid Column Definition const": {
+    "scope": "typescriptreact",
+    "prefix": "yxg_columnsConst",
+    "body": [
+      " const columns: GridColDef[] = [",
+      "\t\t{ field: '${1:fieldName}', headerName: '${2:Column Header Name)}' },",
+      "\t\t{ field: '${3:fieldName}', headerName: '${4:Column Header Name)}' },",
+      "\t\t{ field: '${5:fieldName}', headerName: '${6:Column Header Name)}' },",
+      "\t];"
+    ],
+    "description": "need to create a column definiton for grid columns? use this! "
+  },
+  "useCopyToClipboard hook": {
+    "scope": "typescriptreact",
+    "prefix": "yxh_CopyToClipboard",
+    "body": ["const [value, copy] = $0useCopyToClipboard();"],
+    "description": "need a function that copies a given string to clipboard and display success toast? use this! Please use this for all clipboard copies as this checks for browser errors. "
+  }
 }
