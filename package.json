@@ -22,7 +22,8 @@
     ]
   },
   "galleryBanner": {
-    "color": "#8f8ce6"
+    "color": "#8f8ce6",
+    "theme": "light"
   },
   "badges": [],
   "icon": "favicon.ico"
