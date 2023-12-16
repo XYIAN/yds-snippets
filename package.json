@@ -10,6 +10,9 @@
   "categories": [
     "Snippets"
   ],
+  "repository": {
+    "url": "https://github.com/XYIAN/yds-snippets"
+  },
   "contributes": {
     "snippets": [
       {
@@ -19,7 +22,7 @@
     ]
   },
   "galleryBanner": {
-    "color": "#4842ff"
+    "color": "#8f8ce6"
   },
   "icon": "favicon.ico"
 }
