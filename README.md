@@ -14,6 +14,15 @@ Created for YDS Development Team. Contains useful snippets for typescript develo
 
 - currently updating snippet grid and is planned for release 1.0.0
 - all snippets can be viewed through intellisense by typing yx in any .tsx file. ( TSX FILES ONLY )
+- snippet updated are planned weekly, please enable auto updates
+
+| Snippet | Description                           |
+| ------- | ------------------------------------- |
+| yx      | basic snippets (button, useEffect...) |
+| yxx     | component starter                     |
+| yxa     | api library                           |
+| yxf     | form library                          |
+| yxg     | grid library                          |
 
 ## For more information
 
