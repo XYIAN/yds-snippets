@@ -22,9 +22,9 @@
     ]
   },
   "galleryBanner": {
-    "color": "#bd1004",
+    "color": "#0700c7",
     "theme": "dark"
   },
   "badges": [],
-  "icon": "images/yamaha-red-attempt.jpg"
+  "icon": "images/yamaha.svg"
 }
