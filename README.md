@@ -10,13 +10,18 @@
 
 Created for YDS Development Team. Contains useful snippets for typescript development.
 
+## Getting Started
+
+- currently updating snippet grid and is planned for release 1.0.0
+- all snippets can be viewed through intellisense by typing yx in any .tsx file. ( TSX FILES ONLY )
+
 ## For more information
 
 - [Repository](https://github.com/XYIAN/yds-snippets)
 
 **Happy Holidays Everyone!**
 
-### UPDATES:
+### UPDATES
 
 - This is currently a shell, new gifs, snippets, and extension page comming soon.
 - snippet testing in progress, release planned for 1//1/24
