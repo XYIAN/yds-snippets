@@ -4,7 +4,7 @@
   </a>
 </p>
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-blue.svg?style=flat-square)](#contributors-) ![Snippet Count](https://img.shields.io/badge/Custom_Snippets-42-orange.svg?style=flat-square)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-blue.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=YAMAHA.yds-snippets#:~:text=Motor%20Corperation%20USA-,Contributors,-%E2%9C%A8) ![Snippet Count](https://img.shields.io/badge/Custom_Snippets-42-orange.svg?style=flat-square)
 
 # YDS Snippet Library
 
