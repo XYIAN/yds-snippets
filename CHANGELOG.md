@@ -2,9 +2,14 @@
 
 All notable changes to the "yds-snippets" extension
 
-## [Unreleased]
+## [Unreleased] [0.1.0] - 01-01-24
 
-## [0.1.0] - 2024-01-01
+- yds core snippets with commands (tested)
+
+## [UPDATE] - 12-13-23
+
+- syntax fixes for yxf library
+- added label option to Dropdown
 
 ## [UPDATE]
 
