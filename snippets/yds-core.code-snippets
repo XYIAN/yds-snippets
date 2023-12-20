@@ -142,9 +142,10 @@
       "\t<DropDownController",
       "\t\tcontrol={${1:control}}",
       "\t\tname='${2:FormElementID}'",
-      "\t\toptions={${3:options}}",
-      "\t\toptionLabel='${4:labelParamFrom_options[]}'",
-      "\t\toptionValue='${5:valueParamFrom_options[]}'",
+      "\t\tlabel='${3:labelText}'",
+      "\t\toptions={${4:options}}",
+      "\t\toptionLabel='${5:labelParamFrom_options[]}'",
+      "\t\toptionValue='${6:valueParamFrom_options[]}'",
       "\t/>$0"
     ],
     "description": "need a dropdown element within a <form> ? use this! (only for hook forms )"
@@ -153,7 +154,7 @@
     "scope": "typescriptreact",
     "prefix": "yxf_CalendarController",
     "body": [
-      " <CalenderController",
+      " <CalendarController",
       "\tcontrol={${1:control}}",
       "\t\tname='${2:FormElementID}'",
       "\t\tlabel='${3:labelText}'",
