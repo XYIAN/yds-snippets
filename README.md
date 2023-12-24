@@ -10,6 +10,8 @@
 
 Created for YDS Development Team. Contains useful snippets for typescript development.
 
+![Example using yxf](https://media.giphy.com/media/iMz4SYVtEghHP7VGDj/giphy.gif)
+
 ## Getting Started
 
 - currently updating snippet grid and is planned for release 1.0.0
