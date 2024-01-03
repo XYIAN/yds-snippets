@@ -3,7 +3,7 @@
   "displayName": "YDS Snippets",
   "publisher": "YAMAHA",
   "description": "Yamaha - YDS snippet library for yds common components and useful code. UNDER CONSTRUCTION, RELEASE PLANNED 1/1/24",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "engines": {
     "vscode": "^1.6.0"
   },
