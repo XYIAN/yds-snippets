@@ -14,7 +14,7 @@
       "\tuseEffect(() =>",
       "\t{",
       "\t\t${1:UseEffectLogicGoesHere}",
-      "\t},[$0])//only leave empty to run once on mount/render"
+      "\t},[$0])//only leave empty to run once on render"
     ],
     "description": "quick use effect snippet that is slightly more useful than predefined useEffect snippet"
   },
