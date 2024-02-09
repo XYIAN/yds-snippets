@@ -62,7 +62,7 @@
     "prefix": "yxx_ScreenBasic",
     "body": [
       "import { useEffect, useState, useContext } from 'react';",
-      "import { YDSPanel, YDSScreenContext } from '@businessconnect/common-ui';",
+      "import { YDSPanel, YDSScreenContext } from '@businessconnect/yds-core';",
       "// import {  ${TM_FILENAME_BASE}Api} from '../api/ ${TM_FILENAME_BASE}Api'",
       "",
       "export const MyInventoryScreen = () => {",
