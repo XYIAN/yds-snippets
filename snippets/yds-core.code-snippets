@@ -65,7 +65,7 @@
       "import { YDSPanel, YDSScreenContext } from '@businessconnect/yds-core';",
       "// import {  ${TM_FILENAME_BASE}Api} from '../api/ ${TM_FILENAME_BASE}Api'",
       "",
-      "export const MyInventoryScreen = () => {",
+      "export const ${TM_FILENAME_BASE} = () => {",
       "\tconst { module } = useContext(YDSScreenContext);",
       "\tconst [isLoading, setIsLoading] = useState(false);",
       "\t//const { exampleGetRequest } =  ${TM_FILENAME_BASE}Api(module);",
