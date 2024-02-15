@@ -20,6 +20,7 @@ Created for YDS Development Team. Contains useful snippets for typescript develo
 
 | Snippet | Description                           |
 | ------- | ------------------------------------- |
+| y       | common & react snippets               |
 | yx      | basic snippets (button, useEffect...) |
 | yxx     | component starter                     |
 | yxa     | api library                           |
