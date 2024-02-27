@@ -1,0 +1,70 @@
+{
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "noSemi": false,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "embeddedLanguageFormatting": "auto",
+  "printWidth": 130,
+  "proseWrap": "always",
+  "wrapAttributes": "auto",
+  "jsxSingleQuote": true,
+  "jsxBracketSameLine": false,
+  "jsxSortProps": true,
+  "quoteProps": "consistent",
+  "endOfLine": "auto",
+  "spaceBeforeFunctionParen": true,
+  "arrayBracketSpacing": true,
+  "noEmptyLines": true,
+  "newlineAfterReturn": "always",
+  "newlineBeforeReturn": "always",
+  "htmlVoidTags": ["br", "img", "hr"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "options": {
+        "printWidth": 130,
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": ["*.json", "*.code-snippets"],
+      "options": {
+        "printWidth": 120,
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "printWidth": 130,
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.txt",
+      "options": {
+        "printWidth": 150,
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "printWidth": 200,
+        "tabWidth": 1
+      }
+    }
+  ]
+}
