@@ -259,10 +259,7 @@
     "useForm init": {
         "scope": "typescriptreact",
         "prefix": "yxf_useForm",
-        "body": [
-            "\tconst { control, handleSubmit, ${1| , setValue, getValues, watch, reset, formState, setError, setFocus, trigger |},${2| , setValue, getValues, watch, reset, formState, setError, setFocus, trigger |} } = $0useForm<${3:FormFieldInterfaceOrType}>({ defaultValues: {${4:initial form values go here or leave blank}} });",
-            ""
-        ],
+        "body": ["\tconst { control, handleSubmit } = $0useForm<${3:FormFieldInterfaceOrType}>();", ""],
         "description": "quick set up to add a use form and be guided through its props"
     },
     "ListBox Controller ( hook form only )": {
