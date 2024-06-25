@@ -145,7 +145,7 @@
         "prefix": "yxa_axiosHelpers",
         "body": [
             "const ${1:requestFunctionName} = (${2:params(if any)}) => {",
-            "\treturn ${3| getRequest, postRequestFormData, postRequestJSON, postRequestQueryString, postRequestURLEncodedData, |}(module, '${4:requestName}', '${5:methodName(if any)}', { ${2:params(if any)} });",
+            "\treturn ${3| getRequest, postRequestFormData, postRequestJSON, postRequestQueryString, postRequestURLEncodedData, |}(module, '${4:requestName}', '${5:methodName}', { ${2:params} });",
             "};",
             "$0"
         ],
