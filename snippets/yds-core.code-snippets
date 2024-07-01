@@ -294,7 +294,7 @@
             "\t\toptionLabel='${7:JsonArrayParamName(display value)}'",
             "\t\toptionValue='${8:JsonArrayParamName(value given when selected)}'",
             "\t\tplaceholder={'${9:Please select one or more}'}",
-            "\t\tinline",
+            "\t\tinline{${10| true, false|}}",
             "\t\tshowSelectAll",
             "\t\tshowClear",
             "\t/>"
