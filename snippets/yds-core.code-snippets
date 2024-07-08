@@ -295,8 +295,6 @@
             "\t\toptionValue='${8:JsonArrayParamName(value given when selected)}'",
             "\t\tplaceholder={'${9:Please select one or more}'}",
             "\t\tinline{${10| true, false|}}",
-            "\t\tshowSelectAll",
-            "\t\tshowClear",
             "\t/>"
         ],
         "description": "need a multiSelect input? Use this for a quick starter! (hook form/useForm only)"
