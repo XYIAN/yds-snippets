@@ -293,7 +293,7 @@
             "\t\toptions={${6:JSON_Array or Array[]}}",
             "\t\toptionLabel='${7:JsonArrayParamName(display value)}'",
             "\t\toptionValue='${8:JsonArrayParamName(value given when selected)}'",
-            "\t\tplaceholder={'${3}'}",
+            "\t\tplaceholder={'${3:placeholder}'}",
             "\t\tinline{${10| true, false|}}",
             "\t/>"
         ],
